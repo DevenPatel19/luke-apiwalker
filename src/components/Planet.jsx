@@ -13,7 +13,7 @@ const Planets = () => {
         axios.get(`https://swapi.dev/api/planets/${id}/`)
             .then((response) => { setPlanet(response.data); })
             .catch(() => navigate("/error"));
-    }, [id]);
+    }, );
 
     if (planet == null) {
         return <h3>I feel a disturbance in the force...</h3>
